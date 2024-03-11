@@ -4,8 +4,8 @@ from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
 import evaluate
 
-path_train = r"data/clean/RECCON_train.csv"
-path_test = r"data/clean/RECCON_test.csv"
+path_train = r"data/clean/EDFnlp_train.csv"
+path_test = r"data/clean/EDFnlp_test.csv"
 
 ds = load_dataset("csv", data_files={"train": path_train, "test": path_test})
 
@@ -20,22 +20,20 @@ dse = ds.map(tokenize, batched=True)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 id2label = {
-    0: "anger",
-    1: "disgust",
+    6: "surprise",
+    7: "love",
     2: "fear",
-    3: "happiness",
-    4: "neutral",
+    0: "anger",
     5: "sadness",
-    6: "surprise"
+    3: "happiness"
 }
 label2id = {
-    "anger": 0,
-    "disgust": 1,
+    "surprise": 6,
+    "love": 7,
     "fear": 2,
-    "happiness": 3,
-    "neutral": 4,
+    "anger": 0,
     "sadness": 5,
-    "surprise": 6
+    "happiness": 3
 }
 num_labels = len(label2id)
 

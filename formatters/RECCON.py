@@ -89,8 +89,6 @@ df_test = df_test[df_test["labels"] != "excited"]
 print(df_train["labels"].value_counts(ascending=True))
 print(df_test["labels"].value_counts(ascending=True))
 
-#TODO - add mapping to models
-
 df_train["labels"].replace({
     "anger": 0,
     "disgust": 1,
