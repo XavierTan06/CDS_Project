@@ -1,11 +1,12 @@
 import pandas as pd
+from labelMap import label2id, id2label
 
 fn = ["test", "train", "val"]
 
 test_text = []
 test_labels = []
 
-file_path = r".\data\emotions-dataset-for-nlp\test.txt"
+file_path = r"data\emotions-dataset-for-nlp\test.txt"
 with open(file_path, "r") as f:
     data = f.readlines()
 
@@ -18,7 +19,7 @@ for line in data:
 train_text = []
 train_labels = []
 
-file_path = r".\data\emotions-dataset-for-nlp\train.txt"
+file_path = r"data\emotions-dataset-for-nlp\train.txt"
 with open(file_path, "r") as f:
     data = f.readlines()
 
@@ -28,7 +29,7 @@ for line in data:
     train_text.append(t)
     train_labels.append(l)
 
-file_path = r".\data\emotions-dataset-for-nlp\val.txt"
+file_path = r"data\emotions-dataset-for-nlp\val.txt"
 with open(file_path, "r") as f:
     data = f.readlines()
 
@@ -53,26 +54,11 @@ df_test["labels"].replace(["joy"], ["happiness"], inplace=True)
 print(df_train["labels"].value_counts(ascending=True))
 print(df_test["labels"].value_counts(ascending=True))
 
-df_train["labels"].replace({
-    "surprise": 6,
-    "love": 7,
-    "fear": 2,
-    "anger": 0,
-    "sadness": 5,
-    "happiness": 3
-}, inplace=True)
-
-df_test["labels"].replace({
-    "surprise": 6,
-    "love": 7,
-    "fear": 2,
-    "anger": 0,
-    "sadness": 5,
-    "happiness": 3
-}, inplace=True)
+df_train["labels"].replace(label2id, inplace=True)
+df_test["labels"].replace(label2id, inplace=True)
 
 print(df_train["labels"].value_counts(ascending=True))
 print(df_test["labels"].value_counts(ascending=True))
 
-csv_train = df_train.to_csv(r".\data\clean\EDFnlp_train.csv", index=False)
-csv_test = df_test.to_csv(r".\data\clean\EDFnlp_test.csv", index=False)
+csv_train = df_train.to_csv(r"data\clean\EDFnlp_train.csv", index=False)
+csv_test = df_test.to_csv(r"data\clean\EDFnlp_test.csv", index=False)

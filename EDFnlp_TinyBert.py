@@ -3,6 +3,7 @@ import numpy as np
 from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
 import evaluate
+from labelMap import label2id, id2label
 
 path_train = r"data/clean/EDFnlp_train.csv"
 path_test = r"data/clean/EDFnlp_test.csv"
@@ -19,22 +20,6 @@ dse = ds.map(tokenize, batched=True)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-id2label = {
-    6: "surprise",
-    7: "love",
-    2: "fear",
-    0: "anger",
-    5: "sadness",
-    3: "happiness"
-}
-label2id = {
-    "surprise": 6,
-    "love": 7,
-    "fear": 2,
-    "anger": 0,
-    "sadness": 5,
-    "happiness": 3
-}
 num_labels = len(label2id)
 
 model = AutoModelForSequenceClassification.from_pretrained(model_ckpt, num_labels=num_labels, id2label=id2label, label2id=label2id).to(device)

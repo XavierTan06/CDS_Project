@@ -3,6 +3,7 @@ import numpy as np
 from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
 import evaluate
+from labelMap import label2id, id2label
 
 path_train = r"data/clean/RECCON_train.csv"
 path_test = r"data/clean/RECCON_test.csv"
@@ -19,24 +20,6 @@ dse = ds.map(tokenize, batched=True)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-id2label = {
-    0: "anger",
-    1: "disgust",
-    2: "fear",
-    3: "happiness",
-    4: "neutral",
-    5: "sadness",
-    6: "surprise"
-}
-label2id = {
-    "anger": 0,
-    "disgust": 1,
-    "fear": 2,
-    "happiness": 3,
-    "neutral": 4,
-    "sadness": 5,
-    "surprise": 6
-}
 num_labels = len(label2id)
 
 model = AutoModelForSequenceClassification.from_pretrained(model_ckpt, num_labels=num_labels, id2label=id2label, label2id=label2id).to(device)
