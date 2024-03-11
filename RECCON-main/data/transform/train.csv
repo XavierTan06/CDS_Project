@@ -1072,9 +1072,9 @@ What ? What did you buy ?,surprise
 "There was a guy on the sidewalk . He had three new boxes , Panasonic video camera boxes . He said he had to get rid of them quick .",anger
 But why would a guy be selling new video cameras for twenty dollars ?,neutral
 Look what you've done !,anger
-"I'm very sorry , sir . I'll bring you a cloth immediately .",sad
+"I'm very sorry , sir . I'll bring you a cloth immediately .",sadness
 "Yes , and hurry up !",anger
-I'd like to apologize for my carelessness . May I clean it up for you ?,sad
+I'd like to apologize for my carelessness . May I clean it up for you ?,sadness
 "No , I'll do it myself .",neutral
 "Here is my card , sir . Could you send me the cleaning bill and I will refund the cost to you ?",neutral
 "I should think so , too !",neutral
@@ -1514,7 +1514,7 @@ What ? Why do we have to do that ?,surprise
 "Well , at the start of the spring we usually have more daylight in the mornings and less in the afternoon . This is basically due to our position on the planet and the rotation of the earth . In any case , to take better advantage of the daylight available , we compensate by moving our clocks forward one hour .",neutral
 "I see . That ' s convenient ! I never understood things like this , such as GMT . I never know what time zone we are in or when to change my clock !",anger
 "That just stands for Greenwich Mean Time . Here in California , we are in Pacific Standard Time , that is eight time zones west of Greenwich . Remember when we were in Beijing ? Well , then we were in China Standard Time , and that ' s eight time zones east of Greenwich !",neutral
-"That ' s why it was so weird traveling from Beijing to LA ! Because of the huge time difference , even though we left Beijing at noon and flew for more than eight hours , we still arrived in LA the same day at noon ! It ' s like we went back in time !",surprised
+"That ' s why it was so weird traveling from Beijing to LA ! Because of the huge time difference , even though we left Beijing at noon and flew for more than eight hours , we still arrived in LA the same day at noon ! It ' s like we went back in time !",surprise
 I can't stand being with you any more . I'm sick of your drinking .,anger
 "I swear I never drink again . Just give me another chance , please .",sadness
 "How many chances have I given you , I've given up on you .",anger
@@ -1877,11 +1877,11 @@ OK ! Let's go .,happiness
 Where can find the pandas ? I think we are here to see the pandas .,neutral
 We have to go to the mammal area . We are at the gate right now . We need to go straight from here and turn left and go along to the end and make anotherleft turn .,neutral
 It should take at least 20 minutes to get there . Are there any shuttle buses running place to place around the whole zoo ?,neutral
-I really like the record you lent me the other day .,happy
-I'm glad you like it .,happy
-And thank you very much for letting me keep it so long .,happy
-I'm most grateful . Everyone in our class enjoyed it .,happy
-I'm glad .,happy
+I really like the record you lent me the other day .,happiness
+I'm glad you like it .,happiness
+And thank you very much for letting me keep it so long .,happiness
+I'm most grateful . Everyone in our class enjoyed it .,happiness
+I'm glad .,happiness
 Would you mind my keeping it for another week ?,neutral
 "Hi Amanda , how are you ? I've missed working with you and the whole gang since my transfer last week .",happiness
 We've missed you too . The office just isn't the same without you . How is your new job ?,happiness
@@ -3962,7 +3962,6 @@ Cardiopulmonary resuscitation !,happiness
 That ' s right ! We apply CPR in the case of cardiac arrest or pulmonary arrest .,neutral
 What does that mean ?,neutral
 "Well , basically if your heart stops pumping blood , or your lungs stop pumping air , then we need to get them going again ! That ' s when we have to apply this procedure . Let ' s begin ! I need a volunteer .",neutral
-Me ! Me !,excited
 "Alright , come here and lay flat on your back . Let ' s suppose this young woman has stopped breathing . We must lift the person ' s chin so that we clear a pathway for air to get into the lungs . Then we place our mouth over the other person ' s mouth and blow air two or three times , like this .",neutral
 "Wait , what are you doing ? I ' m a married woman ! You can ' t just try to kiss me like this !",surprise
 Madam I ' m not trying to kiss you ! I am trying to demonstrate how to apply CPR in the case of an emergency .,neutral
@@ -4423,7 +4422,7 @@ You are pretending !,happiness
 It's wrong because---it isn't true .,happiness
 "You know that everybody notices how beautiful you are , don't you ?",happiness
 "Well , no-that is , I've heard Linda say they do , but ... Thank you . But please don't speak to me again .",disgust
-"Oh , Miss Anna ! That's too hard ! I won't be here long .",sad
+"Oh , Miss Anna ! That's too hard ! I won't be here long .",sadness
 Hello Mary . I haven ' t seen you for ages . Are you still seeing Paul ?,neutral
 No . We broke up last month . I ' m taking a break from dating for a while .,neutral
 Did you break up amicably ? Sometimes couples row a lot before splitting up .,neutral
@@ -4505,7 +4504,6 @@ I thought you had forgotten .,happiness
 "Thank you honey , it means a lot to me .",happiness
 "Bill , I have received the admission letter from Cambridge University !",happiness
 How about you ? Have you got any news from university ?,neutral
-No . But I am going to apply for some vocational schools . I like fashion design and want to study it .,excited
 I am glad you can study something you really like !,happiness
 "You must like negotiating a lot . People are saying , you are a super negotiator .",happiness
 "Ha , I am flattered . Actually , when it comes to negotiate , you don ' t need to like it . You just need to understand how it works .",happiness
@@ -4682,7 +4680,7 @@ Days ?,surprise
 Probably we'll survive . But turn the car off for about forty-five minutes . Then we'll turn it on again .,neutral
 "Okay , I'll follow your advice .",neutral
 How about this floor lamp ?,neutral
-"Fine , just get it ! We have been shopping for furniture for five hours ! I ' m so tired !",angry
+"Fine , just get it ! We have been shopping for furniture for five hours ! I ' m so tired !",anger
 We still need to find an armoire and a dresser .,neutral
 "Fine ! I am going to go home and drop off this nightstand , coffee table and love seat while you look for the rest of the things .",happiness
 Great ! Pick me up in about an hour because I think I ' ll also get a bean bag and a dining set .,happiness
@@ -7932,11 +7930,11 @@ Did you set your clock forward for daylight savings time ?,surprise
 Did you set your clock forward for daylight savings time ?,anger
 What ? Why do we have to do that ?,anger
 "Well , at the start of the spring we usually have more daylight in the mornings and less in the afternoon . This is basically due to our position on the planet and the rotation of the earth . In any case , to take better advantage of the daylight available , we compensate by moving our clocks forward one hour .",anger
-Did you set your clock forward for daylight savings time ?,surprised
-What ? Why do we have to do that ?,surprised
-"Well , at the start of the spring we usually have more daylight in the mornings and less in the afternoon . This is basically due to our position on the planet and the rotation of the earth . In any case , to take better advantage of the daylight available , we compensate by moving our clocks forward one hour .",surprised
-"I see . That ' s convenient ! I never understood things like this , such as GMT . I never know what time zone we are in or when to change my clock !",surprised
-"That just stands for Greenwich Mean Time . Here in California , we are in Pacific Standard Time , that is eight time zones west of Greenwich . Remember when we were in Beijing ? Well , then we were in China Standard Time , and that ' s eight time zones east of Greenwich !",surprised
+Did you set your clock forward for daylight savings time ?,surprise
+What ? Why do we have to do that ?,surprise
+"Well , at the start of the spring we usually have more daylight in the mornings and less in the afternoon . This is basically due to our position on the planet and the rotation of the earth . In any case , to take better advantage of the daylight available , we compensate by moving our clocks forward one hour .",surprise
+"I see . That ' s convenient ! I never understood things like this , such as GMT . I never know what time zone we are in or when to change my clock !",surprise
+"That just stands for Greenwich Mean Time . Here in California , we are in Pacific Standard Time , that is eight time zones west of Greenwich . Remember when we were in Beijing ? Well , then we were in China Standard Time , and that ' s eight time zones east of Greenwich !",surprise
 Is she American ?,happiness
 "So I take it you two are hitting it off ? I know it's very convenient to be in a relationship with your neighbor , but what if you break up ?",happiness
 I don't know . I am not really worried about that . I don't wanna lose before even starting . Besides I think the other two American guys have also fallen for her .,happiness
@@ -8321,9 +8319,6 @@ I don't know . Wait . Is this yours ?,anger
 It looks that way . That's probably why the door wasn't locked when we came in .,anger
 I locked it when I left though .,anger
 "Yes , but the robber broke in . Then , when he left , he left through the door . So it wasn't locked .",anger
-"Bill , I have received the admission letter from Cambridge University !",excited
-Congratulations !,excited
-How about you ? Have you got any news from university ?,excited
 How about you ? Have you got any news from university ?,happiness
 No . But I am going to apply for some vocational schools . I like fashion design and want to study it .,happiness
 Martha . What's wrong ? Why are you crying ?,sadness
@@ -9581,9 +9576,9 @@ I'm sorry man . I didn't know . I didn't mean to screw anything up .,anger
 "Look . I really didn't mean to , and next time I see Martha , I'll really tell her that you and Sara are really just friends .",anger
 Hey Jane . How are you doing these days ?,happiness
 Are you enjoying married life ?,happiness
-Look what you've done !,sad
+Look what you've done !,sadness
 "I'm very sorry , sir . I'll bring you a cloth immediately .",anger
-"Yes , and hurry up !",sad
+"Yes , and hurry up !",sadness
 Look what you've done !,sadness
 "I'm very sorry , sir . I'll bring you a cloth immediately .",sadness
 "Yes , and hurry up !",sadness
@@ -9636,7 +9631,7 @@ It's not just that . She also criticizes how we raise the kids .,happiness
 "My mother-in-law used to do the same thing to us . If it wasn't disciplining them enough , then we were disciplining them too much . She also complained about the food we fed them , the schools we sent them too , and everything else under the sun .",happiness
 You said she used to ? How did you stop her ?,happiness
 "We basically sat her down and told her how we felt about her constant criticizing , and how we welcomed her advice but hoped she'd let us do our things . She understood , and now everything is a lot more peaceful .",happiness
-Not at all .,happy
+Not at all .,happiness
 "Hello , this is 5735647 5 .",surprise
 "Hello , this is John . I wanna speak to Linda , please .",surprise
 This is Linda .,surprise
@@ -9687,11 +9682,6 @@ You ' ll need to make an appointment to view the apartment .,happiness
 I understand . May I make an appointment then ?,happiness
 How does this Friday sound ?,happiness
 "Hello everyone , and welcome to our CPR for beginners course . First of all , does anyone know what CPR stands for ?",happiness
-"Hello everyone , and welcome to our CPR for beginners course . First of all , does anyone know what CPR stands for ?",excited
-Cardiopulmonary resuscitation !,excited
-That ' s right ! We apply CPR in the case of cardiac arrest or pulmonary arrest .,excited
-What does that mean ?,excited
-"Well , basically if your heart stops pumping blood , or your lungs stop pumping air , then we need to get them going again ! That ' s when we have to apply this procedure . Let ' s begin ! I need a volunteer .",excited
 "Hello everyone , and welcome to our CPR for beginners course . First of all , does anyone know what CPR stands for ?",surprise
 Cardiopulmonary resuscitation !,surprise
 That ' s right ! We apply CPR in the case of cardiac arrest or pulmonary arrest .,surprise
@@ -10039,12 +10029,12 @@ You are pretending !,disgust
 "No , Miss Anna , you must let me say how lovely you are ! What's wrong with that ?",disgust
 It's wrong because---it isn't true .,disgust
 "You know that everybody notices how beautiful you are , don't you ?",disgust
-"I couldn't look at you , and say you aren't beautiful !",sad
-You are pretending !,sad
-"No , Miss Anna , you must let me say how lovely you are ! What's wrong with that ?",sad
-It's wrong because---it isn't true .,sad
-"You know that everybody notices how beautiful you are , don't you ?",sad
-"Well , no-that is , I've heard Linda say they do , but ... Thank you . But please don't speak to me again .",sad
+"I couldn't look at you , and say you aren't beautiful !",sadness
+You are pretending !,sadness
+"No , Miss Anna , you must let me say how lovely you are ! What's wrong with that ?",sadness
+It's wrong because---it isn't true .,sadness
+"You know that everybody notices how beautiful you are , don't you ?",sadness
+"Well , no-that is , I've heard Linda say they do , but ... Thank you . But please don't speak to me again .",sadness
 My Goodness ! What a busy line so early in the morning ! Hello .,happiness
 Ruth ? Basil .,happiness
 "Hi , Basil .",happiness
@@ -11763,7 +11753,7 @@ For what ?,anger
 Do you think the weather will be good this weekend ?,happiness
 I heard it might rain .,happiness
 Oh . That ' s a pity . I thought that we might go hiking in the hills .,happiness
-How about this floor lamp ?,angry
+How about this floor lamp ?,anger
 How about this floor lamp ?,happiness
 "Fine , just get it ! We have been shopping for furniture for five hours ! I ' m so tired !",happiness
 We still need to find an armoire and a dresser .,happiness
@@ -12565,7 +12555,7 @@ This is how a holiday should be . Relaxing on the beach with a nice cool drink .
 "this party rocks ! you said it . Good beer , good music , and on top of that , there are so many hot girls here ! I'm with you on that . Check out that one over there . I think I'm in love ! well , she's alright , but not really my cup of tea . What about the blond with the red dress ? oh , that's Janice . She's just new in town . You have a thing for blonds , eh ? yeah ! She could do anything she wants to me ! I bet . Why not go over and talk to her ? She's really nice . I don't think so . I get so nervous talking to girls . I always put my foot in my mouth , scare her off , and end up looking like a real fool . Besides , she is way out of my league . come on ! Man up ! You'll never know until you try . okay okay , just let me have another cup of beers to get my head in the game . all right . But I think you ought to move soon . why ? I can see five other guys eying her up . okay , here I go ! good luck !",happiness
 Did you set your clock forward for daylight savings time ? What ? Why do we have to do that ?,surprise
 "Did you set your clock forward for daylight savings time ? What ? Why do we have to do that ? Well , at the start of the spring we usually have more daylight in the mornings and less in the afternoon . This is basically due to our position on the planet and the rotation of the earth . In any case , to take better advantage of the daylight available , we compensate by moving our clocks forward one hour . I see . That ' s convenient ! I never understood things like this , such as GMT . I never know what time zone we are in or when to change my clock !",anger
-"Did you set your clock forward for daylight savings time ? What ? Why do we have to do that ? Well , at the start of the spring we usually have more daylight in the mornings and less in the afternoon . This is basically due to our position on the planet and the rotation of the earth . In any case , to take better advantage of the daylight available , we compensate by moving our clocks forward one hour . I see . That ' s convenient ! I never understood things like this , such as GMT . I never know what time zone we are in or when to change my clock ! That just stands for Greenwich Mean Time . Here in California , we are in Pacific Standard Time , that is eight time zones west of Greenwich . Remember when we were in Beijing ? Well , then we were in China Standard Time , and that ' s eight time zones east of Greenwich ! That ' s why it was so weird traveling from Beijing to LA ! Because of the huge time difference , even though we left Beijing at noon and flew for more than eight hours , we still arrived in LA the same day at noon ! It ' s like we went back in time !",surprised
+"Did you set your clock forward for daylight savings time ? What ? Why do we have to do that ? Well , at the start of the spring we usually have more daylight in the mornings and less in the afternoon . This is basically due to our position on the planet and the rotation of the earth . In any case , to take better advantage of the daylight available , we compensate by moving our clocks forward one hour . I see . That ' s convenient ! I never understood things like this , such as GMT . I never know what time zone we are in or when to change my clock ! That just stands for Greenwich Mean Time . Here in California , we are in Pacific Standard Time , that is eight time zones west of Greenwich . Remember when we were in Beijing ? Well , then we were in China Standard Time , and that ' s eight time zones east of Greenwich ! That ' s why it was so weird traveling from Beijing to LA ! Because of the huge time difference , even though we left Beijing at noon and flew for more than eight hours , we still arrived in LA the same day at noon ! It ' s like we went back in time !",surprise
 "It's a lovely day , isn't it ? Yeah , and most excitingly , I met the girl living under me today . She's really nice .",happiness
 "It's a lovely day , isn't it ? Yeah , and most excitingly , I met the girl living under me today . She's really nice . Is she American ? Yeah , and most importantly , she's single ! Man , I could tell from the moment I saw her , she's the girl of my dreams !",happiness
 "It's a lovely day , isn't it ? Yeah , and most excitingly , I met the girl living under me today . She's really nice . Is she American ? Yeah , and most importantly , she's single ! Man , I could tell from the moment I saw her , she's the girl of my dreams ! So I take it you two are hitting it off ? I know it's very convenient to be in a relationship with your neighbor , but what if you break up ? I don't know . I am not really worried about that . I don't wanna lose before even starting . Besides I think the other two American guys have also fallen for her . Sounds like you've got some competition . You made a move already ? Not yet . But I am thinking of inviting her to dinner sometime . I know some good restaurants nearby . That's nice . Having been here a little while surely gives you the advantage , eh ? You bet . Now that you mentioned it , I think I'll call her now and see if she is available tonight .",happiness
@@ -12909,7 +12899,6 @@ My goodness . She is thirty seconds faster than the world records in five thousa
 "Oh , my God ! What's this ? What ? Look ! This window is open . Did you open it before we left ? Are you kidding ? It's winter . Why would I open it ? I don't know . Wait . Is this yours ? No ! Oh , my God ! Someone has broken into the house .",surprise
 "Oh , my God ! What's this ? What ? Look ! This window is open . Did you open it before we left ? Are you kidding ? It's winter . Why would I open it ? I don't know . Wait . Is this yours ? No ! Oh , my God ! Someone has broken into the house . It looks that way . That's probably why the door wasn't locked when we came in . I locked it when I left though . Yes , but the robber broke in . Then , when he left , he left through the door . So it wasn't locked . I don't care about that , Allen ! What did he steal ? That's the question !",anger
 "Bill , I have received the admission letter from Cambridge University ! Congratulations !",happiness
-"Bill , I have received the admission letter from Cambridge University ! Congratulations ! How about you ? Have you got any news from university ? No . But I am going to apply for some vocational schools . I like fashion design and want to study it .",excited
 "Bill , I have received the admission letter from Cambridge University ! Congratulations ! How about you ? Have you got any news from university ? No . But I am going to apply for some vocational schools . I like fashion design and want to study it . I am glad you can study something you really like !",happiness
 Martha . What's wrong ? Why are you crying ? Jake just broke up with me .,sadness
 Martha . What's wrong ? Why are you crying ? Jake just broke up with me . I'm sorry . When did this happen ? Yesterday . I didn't even know it was coming . He just told me he found someone else .,sadness
@@ -14058,9 +14047,9 @@ Hey Jane . How are you doing these days ? Hi Martha . Everything is perfect . Ar
 "Hey Jane . How are you doing these days ? Hi Martha . Everything is perfect . Are you enjoying married life ? It couldn't be better . My husband is so supportive with my work and he helps around the house so much . You're so lucky . I hope to get married to a guy like that . I'm so happy . Even though we are both working , we get to spend a lot of time with each other in the evening and on the weekends . Do you guys do anything special ?",happiness
 "Hey Jane . How are you doing these days ? Hi Martha . Everything is perfect . Are you enjoying married life ? It couldn't be better . My husband is so supportive with my work and he helps around the house so much . You're so lucky . I hope to get married to a guy like that . I'm so happy . Even though we are both working , we get to spend a lot of time with each other in the evening and on the weekends . Do you guys do anything special ? In the evening , we just sit and talk over dinner . But on the weekend , we try to go out to the beach or hit a nice restaurant , or go to a nice cafe .",happiness
 "Hey Jane . How are you doing these days ? Hi Martha . Everything is perfect . Are you enjoying married life ? It couldn't be better . My husband is so supportive with my work and he helps around the house so much . You're so lucky . I hope to get married to a guy like that . I'm so happy . Even though we are both working , we get to spend a lot of time with each other in the evening and on the weekends . Do you guys do anything special ? In the evening , we just sit and talk over dinner . But on the weekend , we try to go out to the beach or hit a nice restaurant , or go to a nice cafe . Sound like everything is great .",happiness
-"Look what you've done ! I'm very sorry , sir . I'll bring you a cloth immediately .",sad
+"Look what you've done ! I'm very sorry , sir . I'll bring you a cloth immediately .",sadness
 "Look what you've done ! I'm very sorry , sir . I'll bring you a cloth immediately . Yes , and hurry up !",anger
-"Look what you've done ! I'm very sorry , sir . I'll bring you a cloth immediately . Yes , and hurry up ! I'd like to apologize for my carelessness . May I clean it up for you ?",sad
+"Look what you've done ! I'm very sorry , sir . I'll bring you a cloth immediately . Yes , and hurry up ! I'd like to apologize for my carelessness . May I clean it up for you ?",sadness
 "Look what you've done ! I'm very sorry , sir . I'll bring you a cloth immediately . Yes , and hurry up ! I'd like to apologize for my carelessness . May I clean it up for you ? No , I'll do it myself . Here is my card , sir . Could you send me the cleaning bill and I will refund the cost to you ? I should think so , too ! I'm very sorry to have caused you this trouble .",sadness
 "Look what you've done ! I'm very sorry , sir . I'll bring you a cloth immediately . Yes , and hurry up ! I'd like to apologize for my carelessness . May I clean it up for you ? No , I'll do it myself . Here is my card , sir . Could you send me the cleaning bill and I will refund the cost to you ? I should think so , too ! I'm very sorry to have caused you this trouble . Yes , and please be more careful in the future !",anger
 "Look what you've done ! I'm very sorry , sir . I'll bring you a cloth immediately . Yes , and hurry up ! I'd like to apologize for my carelessness . May I clean it up for you ? No , I'll do it myself . Here is my card , sir . Could you send me the cleaning bill and I will refund the cost to you ? I should think so , too ! I'm very sorry to have caused you this trouble . Yes , and please be more careful in the future ! I will , sir . I'm really very sorry .",sadness
@@ -14089,10 +14078,10 @@ John ! Wait a second ! I was just heading downstairs for a cup of coffee . You w
 "Happy birthday , Ms . Lin . Here is a present for you . Oh , thank you ! It's very kind of you . Ah , it is a porcelain vase . I hope you like it .",happiness
 "Happy birthday , Ms . Lin . Here is a present for you . Oh , thank you ! It's very kind of you . Ah , it is a porcelain vase . I hope you like it . Yes , it is lovely . I have been expecting something like this for a long time . Thanks ever so much .",happiness
 "Happy birthday , Ms . Lin . Here is a present for you . Oh , thank you ! It's very kind of you . Ah , it is a porcelain vase . I hope you like it . Yes , it is lovely . I have been expecting something like this for a long time . Thanks ever so much . I am glad you like it .",happiness
-I really like the record you lent me the other day . I'm glad you like it .,happy
-I really like the record you lent me the other day . I'm glad you like it . And thank you very much for letting me keep it so long .,happy
-I really like the record you lent me the other day . I'm glad you like it . And thank you very much for letting me keep it so long . Not at all . I'm most grateful . Everyone in our class enjoyed it .,happy
-I really like the record you lent me the other day . I'm glad you like it . And thank you very much for letting me keep it so long . Not at all . I'm most grateful . Everyone in our class enjoyed it . I'm glad .,happy
+I really like the record you lent me the other day . I'm glad you like it .,happiness
+I really like the record you lent me the other day . I'm glad you like it . And thank you very much for letting me keep it so long .,happiness
+I really like the record you lent me the other day . I'm glad you like it . And thank you very much for letting me keep it so long . Not at all . I'm most grateful . Everyone in our class enjoyed it .,happiness
+I really like the record you lent me the other day . I'm glad you like it . And thank you very much for letting me keep it so long . Not at all . I'm most grateful . Everyone in our class enjoyed it . I'm glad .,happiness
 How time flies ! May and Danny have already grown up .,happiness
 How time flies ! May and Danny have already grown up . I can still remember our first date .,happiness
 How time flies ! May and Danny have already grown up . I can still remember our first date . Look at that big tree over there .,happiness
@@ -14132,7 +14121,6 @@ How nice it is here You can say that again . The sunny shining and there ' s ple
 "How are you doing ? Everything ' s fine with me . What can I do for you today ? Is it possible for me to view the apartment today ? Unfortunately , you will not be able to view it today . Why can ' t I view it today ? You ' ll need to make an appointment to view the apartment . I understand . May I make an appointment then ? How does this Friday sound ? Friday at 6 pm . would be perfect . That will be fine .",happiness
 "How are you doing ? Everything ' s fine with me . What can I do for you today ? Is it possible for me to view the apartment today ? Unfortunately , you will not be able to view it today . Why can ' t I view it today ? You ' ll need to make an appointment to view the apartment . I understand . May I make an appointment then ? How does this Friday sound ? Friday at 6 pm . would be perfect . That will be fine . Thanks for your help .",happiness
 "Hello everyone , and welcome to our CPR for beginners course . First of all , does anyone know what CPR stands for ? Cardiopulmonary resuscitation !",happiness
-"Hello everyone , and welcome to our CPR for beginners course . First of all , does anyone know what CPR stands for ? Cardiopulmonary resuscitation ! That ' s right ! We apply CPR in the case of cardiac arrest or pulmonary arrest . What does that mean ? Well , basically if your heart stops pumping blood , or your lungs stop pumping air , then we need to get them going again ! That ' s when we have to apply this procedure . Let ' s begin ! I need a volunteer . Me ! Me !",excited
 "Hello everyone , and welcome to our CPR for beginners course . First of all , does anyone know what CPR stands for ? Cardiopulmonary resuscitation ! That ' s right ! We apply CPR in the case of cardiac arrest or pulmonary arrest . What does that mean ? Well , basically if your heart stops pumping blood , or your lungs stop pumping air , then we need to get them going again ! That ' s when we have to apply this procedure . Let ' s begin ! I need a volunteer . Me ! Me ! Alright , come here and lay flat on your back . Let ' s suppose this young woman has stopped breathing . We must lift the person ' s chin so that we clear a pathway for air to get into the lungs . Then we place our mouth over the other person ' s mouth and blow air two or three times , like this . Wait , what are you doing ? I ' m a married woman ! You can ' t just try to kiss me like this !",surprise
 "Hello everyone , and welcome to our CPR for beginners course . First of all , does anyone know what CPR stands for ? Cardiopulmonary resuscitation ! That ' s right ! We apply CPR in the case of cardiac arrest or pulmonary arrest . What does that mean ? Well , basically if your heart stops pumping blood , or your lungs stop pumping air , then we need to get them going again ! That ' s when we have to apply this procedure . Let ' s begin ! I need a volunteer . Me ! Me ! Alright , come here and lay flat on your back . Let ' s suppose this young woman has stopped breathing . We must lift the person ' s chin so that we clear a pathway for air to get into the lungs . Then we place our mouth over the other person ' s mouth and blow air two or three times , like this . Wait , what are you doing ? I ' m a married woman ! You can ' t just try to kiss me like this ! Madam I ' m not trying to kiss you ! I am trying to demonstrate how to apply CPR in the case of an emergency . Well , OK . But no French kissing ! As I was saying , we blow air through the mouth in this manner . Once this is done , we must try to get the heart going again . To do this , we place our hands over the person ' s chest , and press down firmly two or three times . Wait , what are you doing ! You can ' t just kiss me then go for second base !",surprise
 "Do you take a bus to and from work ? Yeah , everyday . And there ' s only one choice . All the other buses are going the other direction . Hmm . I have the same problem . When I leave work , it ' s always rush hour . So the buses are always crowded . Oh , yeah , it ' s terrible . I will tell you the funniest thing I have seen in China . It ' s when so many people try to get onto one city bus , and the last guy is squeezed in so tight that the door is tightly pressed against his butt .",disgust
@@ -14322,7 +14310,7 @@ Steve . Is that you ? Yeah . What's going on ? Not much . What a surprise to see
 "I couldn't look at you , and say you aren't beautiful ! You are pretending ! No , Miss Anna , you must let me say how lovely you are ! What's wrong with that ? It's wrong because---it isn't true .",happiness
 "I couldn't look at you , and say you aren't beautiful ! You are pretending ! No , Miss Anna , you must let me say how lovely you are ! What's wrong with that ? It's wrong because---it isn't true . You know that everybody notices how beautiful you are , don't you ?",happiness
 "I couldn't look at you , and say you aren't beautiful ! You are pretending ! No , Miss Anna , you must let me say how lovely you are ! What's wrong with that ? It's wrong because---it isn't true . You know that everybody notices how beautiful you are , don't you ? Well , no-that is , I've heard Linda say they do , but ... Thank you . But please don't speak to me again .",disgust
-"I couldn't look at you , and say you aren't beautiful ! You are pretending ! No , Miss Anna , you must let me say how lovely you are ! What's wrong with that ? It's wrong because---it isn't true . You know that everybody notices how beautiful you are , don't you ? Well , no-that is , I've heard Linda say they do , but ... Thank you . But please don't speak to me again . Oh , Miss Anna ! That's too hard ! I won't be here long .",sad
+"I couldn't look at you , and say you aren't beautiful ! You are pretending ! No , Miss Anna , you must let me say how lovely you are ! What's wrong with that ? It's wrong because---it isn't true . You know that everybody notices how beautiful you are , don't you ? Well , no-that is , I've heard Linda say they do , but ... Thank you . But please don't speak to me again . Oh , Miss Anna ! That's too hard ! I won't be here long .",sadness
 "My Goodness ! What a busy line so early in the morning ! Hello . Ruth ? Basil . Hi , Basil . Want a ride to the office ? Yes , by all means . I was just about to leave . Hold on . Just 5 minutes . I'll wait on the sidewalk . It's very kind of you .",happiness
 "My Goodness ! What a busy line so early in the morning ! Hello . Ruth ? Basil . Hi , Basil . Want a ride to the office ? Yes , by all means . I was just about to leave . Hold on . Just 5 minutes . I'll wait on the sidewalk . It's very kind of you . It's my pleasure . See you .",happiness
 "My Goodness ! What a busy line so early in the morning ! Hello . Ruth ? Basil . Hi , Basil . Want a ride to the office ? Yes , by all means . I was just about to leave . Hold on . Just 5 minutes . I'll wait on the sidewalk . It's very kind of you . It's my pleasure . See you . Hi , Basil . Hi , Ruth . Hop in . Do you mind if I take some notes while we drive ? Of course I don't mind . For your report ? Yes , I finally have an inspiration .",happiness
@@ -15802,7 +15790,7 @@ Do you think the weather will be good this weekend ? I heard it might rain . Oh 
 Do you think the weather will be good this weekend ? I heard it might rain . Oh . That ' s a pity . I thought that we might go hiking in the hills . Mmm ... Well we could go to that new art gallery instead . Yes that might be a better idea .,happiness
 Do you think the weather will be good this weekend ? I heard it might rain . Oh . That ' s a pity . I thought that we might go hiking in the hills . Mmm ... Well we could go to that new art gallery instead . Yes that might be a better idea . Maybe we ' ll meet some of the artists too .,happiness
 Do you think the weather will be good this weekend ? I heard it might rain . Oh . That ' s a pity . I thought that we might go hiking in the hills . Mmm ... Well we could go to that new art gallery instead . Yes that might be a better idea . Maybe we ' ll meet some of the artists too . Ok - let ' s do that then !,happiness
-"How about this floor lamp ? Fine , just get it ! We have been shopping for furniture for five hours ! I ' m so tired !",angry
+"How about this floor lamp ? Fine , just get it ! We have been shopping for furniture for five hours ! I ' m so tired !",anger
 "How about this floor lamp ? Fine , just get it ! We have been shopping for furniture for five hours ! I ' m so tired ! We still need to find an armoire and a dresser . Fine ! I am going to go home and drop off this nightstand , coffee table and love seat while you look for the rest of the things .",happiness
 "How about this floor lamp ? Fine , just get it ! We have been shopping for furniture for five hours ! I ' m so tired ! We still need to find an armoire and a dresser . Fine ! I am going to go home and drop off this nightstand , coffee table and love seat while you look for the rest of the things . Great ! Pick me up in about an hour because I think I ' ll also get a bean bag and a dining set .",happiness
 "How about this floor lamp ? Fine , just get it ! We have been shopping for furniture for five hours ! I ' m so tired ! We still need to find an armoire and a dresser . Fine ! I am going to go home and drop off this nightstand , coffee table and love seat while you look for the rest of the things . Great ! Pick me up in about an hour because I think I ' ll also get a bean bag and a dining set . While you are at it can you pick out a nice recliner ? I really want one so I can watch TV . Recliner ? In my beautifully decorated living room ? I don ' t think so !",surprise

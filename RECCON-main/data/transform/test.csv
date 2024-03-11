@@ -104,7 +104,6 @@ I thought it was wrong too . It didn't make sense .,neutral
 Just two days ago it was 35 . How can it be 60 ?,surprise
 "So , I went up to the teller and started to exchange the money . And it's true . They really gave me sixty pesos for the dollar .",neutral
 That's amazing ! Really ? How could it change so much in two days ?,surprise
-"Wow , you ' re up early today ! What ' s for breakfast ?",excited
 "Well , I felt like baking , so I made some muffins .",neutral
 Smells good ! I ' ll make some coffee . Do you want me to make you some eggs ?,happiness
 "Sure , I'll take mine , sunny side up .",neutral
@@ -137,7 +136,7 @@ I'll call you later .,neutral
 See you later .,neutral
 Bye .,neutral
 Do you know how late it is ?,anger
-My fault . I didn't realize what time it was .,sad
+My fault . I didn't realize what time it was .,sadness
 I hope you don't think that excuse lets you off the hook .,anger
 Not really . I'm telling the truth .,neutral
 Haven't I asked you to call if you're going to be home late ?,anger
@@ -1649,7 +1648,7 @@ I'm okay . He just stole my things .,sadness
 I'm so sorry .,neutral
 I have to file a report at the police station .,neutral
 Let me take you .,neutral
-I would like that .,happines
+I would like that .,happiness
 "Wow , Amy , look at that number .",happiness
 What's so great about it ?,neutral
 What do you mean ? It's a scrim .,surprise
@@ -3043,17 +3042,17 @@ Is everything all right ?,sadness
 What's the problem ?,sadness
 What do you mean ?,sadness
 "He didn't hurt you , did he ?",sadness
-Is everything all right ?,happines
-Not at all .,happines
-What's the problem ?,happines
-Someone just robbed me .,happines
-What do you mean ?,happines
-This guy just robbed me right on the street .,happines
-"He didn't hurt you , did he ?",happines
-I'm okay . He just stole my things .,happines
-I'm so sorry .,happines
-I have to file a report at the police station .,happines
-Let me take you .,happines
+Is everything all right ?,happiness
+Not at all .,happiness
+What's the problem ?,happiness
+Someone just robbed me .,happiness
+What do you mean ?,happiness
+This guy just robbed me right on the street .,happiness
+"He didn't hurt you , did he ?",happiness
+I'm okay . He just stole my things .,happiness
+I'm so sorry .,happiness
+I have to file a report at the police station .,happiness
+Let me take you .,happiness
 "Hi , I'm back ! Hmm ... your hair is pretty damaged , and you've got split ends .",surprise
 "Hi , I'm back ! Hmm ... your hair is pretty damaged , and you've got split ends .",happiness
 Really ? What can I do ?,happiness
@@ -3162,7 +3161,7 @@ That's strange . I don't recognize any of the ones we had from that description 
 "That might be the artificial lighting , madam . Of course , if you could come back in daylight , you might find it ' s exactly what you are looking for .",happiness
 Are you free tomorrow night ?,happiness
 "Yes , I am .",happiness
-Do you know how late it is ?,sad
+Do you know how late it is ?,sadness
 My fault . I didn't realize what time it was .,anger
 Not really . I'm telling the truth .,anger
 "This is true , but it must've slipped my mind .",anger
@@ -4486,7 +4485,7 @@ Is everything all right ? Not at all .,sadness
 Is everything all right ? Not at all . What's the problem ? Someone just robbed me .,sadness
 Is everything all right ? Not at all . What's the problem ? Someone just robbed me . What do you mean ? This guy just robbed me right on the street .,sadness
 "Is everything all right ? Not at all . What's the problem ? Someone just robbed me . What do you mean ? This guy just robbed me right on the street . He didn't hurt you , did he ? I'm okay . He just stole my things .",sadness
-"Is everything all right ? Not at all . What's the problem ? Someone just robbed me . What do you mean ? This guy just robbed me right on the street . He didn't hurt you , did he ? I'm okay . He just stole my things . I'm so sorry . I have to file a report at the police station . Let me take you . I would like that .",happines
+"Is everything all right ? Not at all . What's the problem ? Someone just robbed me . What do you mean ? This guy just robbed me right on the street . He didn't hurt you , did he ? I'm okay . He just stole my things . I'm so sorry . I have to file a report at the police station . Let me take you . I would like that .",happiness
 "Hi , I'm back ! Hmm ... your hair is pretty damaged , and you've got split ends . Really ? What can I do ?",surprise
 "Hi , I'm back ! Hmm ... your hair is pretty damaged , and you've got split ends . Really ? What can I do ? Well , the trim should fix the split ends , but you might need a deep conditioning treatment . Umm , OK . Whatever you think will help . I'm also going to add some layers to frame your face . Can you use the thinning shears on top , too ? My hair is really thick . No problem !",happiness
 "Hi , I'm back ! Hmm ... your hair is pretty damaged , and you've got split ends . Really ? What can I do ? Well , the trim should fix the split ends , but you might need a deep conditioning treatment . Umm , OK . Whatever you think will help . I'm also going to add some layers to frame your face . Can you use the thinning shears on top , too ? My hair is really thick . No problem ! Hi , I'm back ! Hmm ... your hair is pretty damaged , and you've got split ends . Really ? What can I do ?",surprise
@@ -4544,7 +4543,7 @@ Hi ! I see you are having fun with your new computer and internet connection . T
 "Are you free tomorrow night ? Yes , I am . Shall we have dinner together ? Do you have a special restaurant in mind ?",happiness
 "Are you free tomorrow night ? Yes , I am . Shall we have dinner together ? Do you have a special restaurant in mind ? Yes , I do . I know a place that has excellent food .",happiness
 "Are you free tomorrow night ? Yes , I am . Shall we have dinner together ? Do you have a special restaurant in mind ? Yes , I do . I know a place that has excellent food . OK . I'll be happy to join you .",happiness
-Do you know how late it is ? My fault . I didn't realize what time it was .,sad
+Do you know how late it is ? My fault . I didn't realize what time it was .,sadness
 Do you know how late it is ? My fault . I didn't realize what time it was . I hope you don't think that excuse lets you off the hook .,anger
 Do you know how late it is ? My fault . I didn't realize what time it was . I hope you don't think that excuse lets you off the hook . Not really . I'm telling the truth . Haven't I asked you to call if you're going to be home late ?,anger
 "Do you know how late it is ? My fault . I didn't realize what time it was . I hope you don't think that excuse lets you off the hook . Not really . I'm telling the truth . Haven't I asked you to call if you're going to be home late ? This is true , but it must've slipped my mind . Regardless , all you had to do was give a call . I know . I should've called . Come home late one more time , and you'll find your stuff outside .",anger

@@ -78,14 +78,23 @@ for item in s:
         X_test.append(utterance)
         y_test.append(emotions)
 
-test_dict = {"text": X_test, "emotion": y_test}
 train_dict = {"text": X_train, "emotion": y_train}
+test_dict = {"text": X_test, "emotion": y_test}
 
-df_test = pd.DataFrame(test_dict)
 df_train = pd.DataFrame(train_dict)
+df_test = pd.DataFrame(test_dict)
 
-df_test.drop_duplicates(inplace=True)
 df_train.drop_duplicates(inplace=True)
+df_test.drop_duplicates(inplace=True)
 
-csv_test = df_test.to_csv(os.path.join(script_dir, r"RECCON-main\data\transform\test.csv"), index=False)
+df_train.replace(["sad", "happy", "surprised", "angry"], ["sadness", "happiness", "surprise", "anger"], inplace=True)
+df_test.replace(["sad", "happy", "surprised", "angry", "happines"], ["sadness", "happiness", "surprise", "anger", "happiness"], inplace=True)
+
+df_train = df_train[df_train["emotion"] != "excited"]
+df_test = df_test[df_test["emotion"] != "excited"]
+
+print(df_train["emotion"].value_counts(ascending=True))
+print(df_test["emotion"].value_counts(ascending=True))
+
 csv_train = df_train.to_csv(os.path.join(script_dir, r"RECCON-main\data\transform\train.csv"), index=False)
+csv_test = df_test.to_csv(os.path.join(script_dir, r"RECCON-main\data\transform\test.csv"), index=False)
