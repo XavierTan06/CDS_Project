@@ -59,5 +59,5 @@ trainer = Trainer(
 
 trainer.train()
 
-pred_output = trainer.predict(dse["test"])
-pred_output.metrics
+eval = trainer.evaluate(dse["test"])
+print(eval)

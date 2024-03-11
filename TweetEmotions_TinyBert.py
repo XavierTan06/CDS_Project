@@ -5,8 +5,8 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trai
 import evaluate
 from labelMap import label2id, id2label
 
-path_train = r"data/clean/EDFnlp_train.csv"
-path_test = r"data/clean/EDFnlp_test.csv"
+path_train = r"data/clean/TweetEmotions_train.csv"
+path_test = r"data/clean/TweetEmotions_test.csv"
 
 ds = load_dataset("csv", data_files={"train": path_train, "test": path_test})
 
@@ -17,7 +17,6 @@ def tokenize(batch):
     return tokenizer(batch["text"], padding="max_length", truncation=True, max_length=512)
 
 dse = ds.map(tokenize, batched=True)
-example_data = tokenizer(["Stop playing your phone!"])
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 

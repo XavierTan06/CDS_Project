@@ -6,7 +6,9 @@ id2label = {
     4: "neutral",
     5: "sadness",
     6: "surprise",
-    7: "love"
+    7: "love",
+    8: "worry",
+    9: "relief"
 }
 label2id = {
     "anger": 0,
@@ -16,5 +18,7 @@ label2id = {
     "neutral": 4,
     "sadness": 5,
     "surprise": 6,
-    "love": 7
+    "love": 7,
+    "worry": 8,
+    "relief": 9,
 }
