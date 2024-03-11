@@ -84,5 +84,8 @@ train_dict = {"text": X_train, "emotion": y_train}
 df_test = pd.DataFrame(test_dict)
 df_train = pd.DataFrame(train_dict)
 
+df_test.drop_duplicates(inplace=True)
+df_train.drop_duplicates(inplace=True)
+
 csv_test = df_test.to_csv(os.path.join(script_dir, r"RECCON-main\data\transform\test.csv"), index=False)
 csv_train = df_train.to_csv(os.path.join(script_dir, r"RECCON-main\data\transform\train.csv"), index=False)
