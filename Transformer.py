@@ -16,20 +16,21 @@ model_ckpt = "distilbert-base-uncased"
 tokenizer = AutoTokenizer.from_pretrained(model_ckpt)
 
 def tokenize(batch):
-    return tokenizer(batch["text"], padding=True, truncation=True)
+    return tokenizer(batch["text"], padding="max_length", truncation=True)
 
 dse = ds.map(tokenize, batched=True)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 num_labels = 7
 id2label = {
-    "0": "anger",
-    "1": "disgust",
-    "2": "fear",
-    "3": "happiness",
-    "4": "neutral",
-    "5": "sadness",
-    "6": "surprise"
+    0: "anger",
+    1: "disgust",
+    2: "fear",
+    3: "happiness",
+    4: "neutral",
+    5: "sadness",
+    6: "surprise"
 }
 label2id = {
     "anger": 0,
@@ -63,8 +64,8 @@ training_args = TrainingArguments(
     evaluation_strategy="epoch",
     disable_tqdm=False,
     logging_steps=logging_steps,
-    push_to_hub=True,
-    log_level="error"
+    push_to_hub=False,
+    log_level="debug"
 )
 
 trainer = Trainer(

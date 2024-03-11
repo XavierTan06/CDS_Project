@@ -87,14 +87,39 @@ df_test = pd.DataFrame(test_dict)
 df_train.drop_duplicates(inplace=True)
 df_test.drop_duplicates(inplace=True)
 
-df_train.replace(["sad", "happy", "surprised", "angry"], ["sadness", "happiness", "surprise", "anger"], inplace=True)
-df_test.replace(["sad", "happy", "surprised", "angry", "happines"], ["sadness", "happiness", "surprise", "anger", "happiness"], inplace=True)
+df_train["labels"].replace(["sad", "happy", "surprised", "angry"], ["sadness", "happiness", "surprise", "anger"], inplace=True)
+df_test["labels"].replace(["sad", "happy", "surprised", "angry", "happines"], ["sadness", "happiness", "surprise", "anger", "happiness"], inplace=True)
 
 df_train = df_train[df_train["labels"] != "excited"]
 df_test = df_test[df_test["labels"] != "excited"]
 
 print(df_train["labels"].value_counts(ascending=True))
 print(df_test["labels"].value_counts(ascending=True))
+
+#TODO - add mapping to models
+
+df_train["labels"].replace({
+    "anger": 0,
+    "disgust": 1,
+    "fear": 2,
+    "happiness": 3,
+    "neutral": 4,
+    "sadness": 5,
+    "surprise": 6
+}, inplace=True)
+
+df_test["labels"].replace({
+    "anger": 0,
+    "disgust": 1,
+    "fear": 2,
+    "happiness": 3,
+    "neutral": 4,
+    "sadness": 5,
+    "surprise": 6
+}, inplace=True)
+
+# print(df_train["labels"].value_counts(ascending=True))
+# print(df_test["labels"].value_counts(ascending=True))
 
 csv_train = df_train.to_csv(os.path.join(script_dir, r"RECCON-main\data\transform\train.csv"), index=False)
 csv_test = df_test.to_csv(os.path.join(script_dir, r"RECCON-main\data\transform\test.csv"), index=False)
