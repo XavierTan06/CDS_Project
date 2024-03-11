@@ -1,1 +1,0 @@
-print(df_train["emotion"].value_counts(ascending=True))
