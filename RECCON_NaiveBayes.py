@@ -1,5 +1,5 @@
 import pandas as pd
-from sklearn import tree
+from sklearn import naive_bayes
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
@@ -34,7 +34,7 @@ X_train_tfidf = tfidf_vectorizer.fit_transform(X_train)
 X_test_tfidf = tfidf_vectorizer.transform(X_test)
 
 #Train the Decision Tree model
-dt_model = tree.DecisionTreeClassifier()
+dt_model = naive_bayes.MultinomialNB()
 dt_model.fit(X_train_tfidf, y_train)
 
 # Evaluate the model on the test set

@@ -10,8 +10,24 @@ df_test = pd.read_csv(r"data/clean/RECCON_test.csv")
 
 X_train = df_train["text"]
 X_test = df_test["text"]
-y_train = df_train["labels"]
-y_test = df_test["labels"]
+y_train = df_train["labels"].replace({
+    0: "anger",
+    1: "disgust",
+    2: "fear",
+    3: "happiness",
+    4: "neutral",
+    5: "sadness",
+    6: "surprise"
+})
+y_test = df_test["labels"].replace({
+    0: "anger",
+    1: "disgust",
+    2: "fear",
+    3: "happiness",
+    4: "neutral",
+    5: "sadness",
+    6: "surprise"
+})
 
 # Convert text data into numerical features using TF-IDF vectorization
 tfidf_vectorizer = TfidfVectorizer()
