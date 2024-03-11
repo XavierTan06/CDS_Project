@@ -4,30 +4,15 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MaxAbsScaler
 from sklearn.metrics import classification_report
+from labelMap import label2id, id2label
 
 df_train = pd.read_csv(r"data/clean/RECCON_train.csv")
 df_test = pd.read_csv(r"data/clean/RECCON_test.csv")
 
 X_train = df_train["text"]
 X_test = df_test["text"]
-y_train = df_train["labels"].replace({
-    0: "anger",
-    1: "disgust",
-    2: "fear",
-    3: "happiness",
-    4: "neutral",
-    5: "sadness",
-    6: "surprise"
-})
-y_test = df_test["labels"].replace({
-    0: "anger",
-    1: "disgust",
-    2: "fear",
-    3: "happiness",
-    4: "neutral",
-    5: "sadness",
-    6: "surprise"
-})
+y_train = df_train["labels"].replace(id2label)
+y_test = df_test["labels"].replace(id2label)
 
 # Convert text data into numerical features using TF-IDF vectorization
 tfidf_vectorizer = TfidfVectorizer()

@@ -1,12 +1,12 @@
 import pandas as pd
-from sklearn import naive_bayes
+from sklearn import tree
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from labelMap import label2id, id2label
 
-df_train = pd.read_csv(r"data/clean/RECCON_train.csv")
-df_test = pd.read_csv(r"data/clean/RECCON_test.csv")
+df_train = pd.read_csv(r"data/clean/EDFnlp_train.csv")
+df_test = pd.read_csv(r"data/clean/EDFnlp_test.csv")
 
 X_train = df_train["text"]
 X_test = df_test["text"]
@@ -19,7 +19,7 @@ X_train_tfidf = tfidf_vectorizer.fit_transform(X_train)
 X_test_tfidf = tfidf_vectorizer.transform(X_test)
 
 #Train the Decision Tree model
-dt_model = naive_bayes.MultinomialNB()
+dt_model = tree.DecisionTreeClassifier()
 dt_model.fit(X_train_tfidf, y_train)
 
 # Evaluate the model on the test set

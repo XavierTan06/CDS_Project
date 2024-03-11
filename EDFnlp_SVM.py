@@ -1,12 +1,13 @@
 import pandas as pd
-from sklearn import naive_bayes
+from sklearn.svm import SVC
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MaxAbsScaler
 from sklearn.metrics import classification_report
 from labelMap import label2id, id2label
 
-df_train = pd.read_csv(r"data/clean/RECCON_train.csv")
-df_test = pd.read_csv(r"data/clean/RECCON_test.csv")
+df_train = pd.read_csv(r"data/clean/EDFnlp_train.csv")
+df_test = pd.read_csv(r"data/clean/EDFnlp_test.csv")
 
 X_train = df_train["text"]
 X_test = df_test["text"]
@@ -18,15 +19,23 @@ tfidf_vectorizer = TfidfVectorizer()
 X_train_tfidf = tfidf_vectorizer.fit_transform(X_train)
 X_test_tfidf = tfidf_vectorizer.transform(X_test)
 
-#Train the Decision Tree model
-dt_model = naive_bayes.MultinomialNB()
-dt_model.fit(X_train_tfidf, y_train)
+# Normalize numerical features
+x_scaler = MaxAbsScaler()
+x_scaler.fit(X_train_tfidf)
+X_train_norm = x_scaler.transform(X_train_tfidf)
+X_test_norm = x_scaler.transform(X_test_tfidf)
+
+# Train the SVM model
+svm_model = SVC(kernel='sigmoid')
+# {'poly', 'sigmoid', 'linear', 'precomputed', 'rbf'}
+svm_model.fit(X_train_norm, y_train)
 
 # Evaluate the model on the test set
-y_pred = dt_model.predict(X_test_tfidf)
+y_pred = svm_model.predict(X_test_norm)
 print(classification_report(y_test, y_pred))
 
 example_data = ["Stop playing your phone!"]
 example_data_tfidf = tfidf_vectorizer.transform(example_data)
-prediction = dt_model.predict(example_data_tfidf)
+example_data_norm = x_scaler.transform(example_data_tfidf)
+prediction = svm_model.predict(example_data_norm)
 print("Predicted emotion:", prediction)
