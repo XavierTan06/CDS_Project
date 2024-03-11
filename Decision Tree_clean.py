@@ -12,8 +12,8 @@ df_test = pd.read_csv(os.path.join(script_dir, r"RECCON-main/data/transform/test
 
 X_train = df_train["text"]
 X_test = df_test["text"]
-y_train = df_train["emotion"]
-y_test = df_test["emotion"]
+y_train = df_train["labels"]
+y_test = df_test["labels"]
 
 # Convert text data into numerical features using TF-IDF vectorization
 tfidf_vectorizer = TfidfVectorizer()
