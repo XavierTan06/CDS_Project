@@ -1,4 +1,3 @@
-import os
 import pandas as pd
 from sklearn.svm import SVC
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -6,10 +5,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MaxAbsScaler
 from sklearn.metrics import classification_report
 
-script_dir = os.path.dirname(__file__)
-
-df_train = pd.read_csv(os.path.join(script_dir, r"RECCON-main/data/transform/train.csv"))
-df_test = pd.read_csv(os.path.join(script_dir, r"RECCON-main/data/transform/test.csv"))
+df_train = pd.read_csv(r"data/clean/RECCON_train.csv")
+df_test = pd.read_csv(r"data/clean/RECCON_test.csv")
 
 X_train = df_train["text"]
 X_test = df_test["text"]

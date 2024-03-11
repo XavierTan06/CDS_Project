@@ -1,10 +1,8 @@
-import os
 import json
 import pandas as pd
 
 script_dir = os.path.dirname(__file__)
-file_path = 'RECCON-main\data\original_annotation\dailydialog_train.json'
-file_path = os.path.join(script_dir, file_path)
+file_path = '.\data\RECCON-main\data\original_annotation\dailydialog_train.json'
 with open(file_path, "r") as json_file:
     data = json.load(json_file)
 
@@ -17,8 +15,7 @@ for key, conversations in data.items():
             X_train.append(utterance['utterance'])
             y_train.append(utterance['emotion'])
 
-file_path = r'RECCON-main\data\subtask2\fold1\dailydialog_classification_train_without_context.csv'
-file_path = os.path.join(script_dir, file_path)
+file_path = r'.\data\RECCON-main\data\subtask2\fold1\dailydialog_classification_train_without_context.csv'
 data = pd.read_csv(file_path)
 
 s = data['text'].tolist()
@@ -29,8 +26,7 @@ for item in s:
         X_train.append(utterance)
         y_train.append(emotions)
 
-file_path = r'RECCON-main\data\subtask2\fold1\dailydialog_classification_train_with_context.csv'
-file_path = os.path.join(script_dir, file_path)
+file_path = r'.\data\RECCON-main\data\subtask2\fold1\dailydialog_classification_train_with_context.csv'
 data = pd.read_csv(file_path)
 
 s = data['text'].tolist()
@@ -41,8 +37,7 @@ for item in s:
         X_train.append(utterance)
         y_train.append(emotions)
 
-file_path = 'RECCON-main\data\original_annotation\dailydialog_test.json'
-file_path = os.path.join(script_dir, file_path)
+file_path = '.\data\RECCON-main\data\original_annotation\dailydialog_test.json'
 with open(file_path, "r") as json_file:
     data = json.load(json_file)
 
@@ -54,8 +49,7 @@ for key, conversations in data.items():
             X_test.append(utterance['utterance'])
             y_test.append(utterance['emotion'])
 
-file_path = r'RECCON-main\data\subtask2\fold1\dailydialog_classification_test_without_context.csv'
-file_path = os.path.join(script_dir, file_path)
+file_path = r'.\data\RECCON-main\data\subtask2\fold1\dailydialog_classification_test_without_context.csv'
 data = pd.read_csv(file_path)
 
 s = data['text'].tolist()
@@ -66,8 +60,7 @@ for item in s:
         X_test.append(utterance)
         y_test.append(emotions)
 
-file_path = r'RECCON-main\data\subtask2\fold1\dailydialog_classification_test_with_context.csv'
-file_path = os.path.join(script_dir, file_path)
+file_path = r'.\data\RECCON-main\data\subtask2\fold1\dailydialog_classification_test_with_context.csv'
 data = pd.read_csv(file_path)
 
 s = data['text'].tolist()
@@ -121,5 +114,5 @@ df_test["labels"].replace({
 # print(df_train["labels"].value_counts(ascending=True))
 # print(df_test["labels"].value_counts(ascending=True))
 
-csv_train = df_train.to_csv(os.path.join(script_dir, r"RECCON-main\data\transform\train.csv"), index=False)
-csv_test = df_test.to_csv(os.path.join(script_dir, r"RECCON-main\data\transform\test.csv"), index=False)
+csv_train = df_train.to_csv(r".\data\clean\RECCON_train.csv", index=False)
+csv_test = df_test.to_csv(r".\data\clean\RECCON_test.csv", index=False)

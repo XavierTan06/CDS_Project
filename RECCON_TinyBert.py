@@ -1,22 +1,19 @@
-import os
 import torch
 import numpy as np
 from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
 import evaluate
 
-script_dir = os.path.dirname(__file__)
-
-path_train = os.path.join(script_dir, r"RECCON-main/data/transform/train.csv")
-path_test = os.path.join(script_dir, r"RECCON-main/data/transform/test.csv")
+path_train = r"data/clean/RECCON_train.csv"
+path_test = r"data/clean/RECCON_test.csv"
 
 ds = load_dataset("csv", data_files={"train": path_train, "test": path_test})
 
-model_ckpt = "distilbert-base-uncased"
-tokenizer = AutoTokenizer.from_pretrained(model_ckpt)
+model_ckpt = "prajjwal1/bert-tiny"
+tokenizer = AutoTokenizer.from_pretrained(model_ckpt, do_lower_case=True)
 
 def tokenize(batch):
-    return tokenizer(batch["text"], padding="max_length", truncation=True)
+    return tokenizer(batch["text"], padding="max_length", truncation=True, max_length=512)
 
 dse = ds.map(tokenize, batched=True)
 
@@ -51,13 +48,13 @@ def compute_metrics(eval_pred):
     predictions = np.argmax(logits, axis=-1)
     return metric.compute(predictions=predictions, references=labels)
 
-batch_size = 32
+batch_size = 16
 logging_steps = len(dse["train"]) // batch_size
 model_name = f"{model_ckpt}-finetuned-emotion"
 training_args = TrainingArguments(
     output_dir=model_name,
-    num_train_epochs=2,
-    learning_rate=2e-5,
+    num_train_epochs=4,
+    learning_rate=5e-5,
     per_device_train_batch_size=batch_size,
     per_device_eval_batch_size=batch_size,
     weight_decay=0.01,
