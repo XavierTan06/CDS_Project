@@ -19,14 +19,14 @@ X_train_tfidf = tfidf_vectorizer.fit_transform(X_train)
 X_test_tfidf = tfidf_vectorizer.transform(X_test)
 
 #Train the Decision Tree model
-dt_model = naive_bayes.MultinomialNB()
-dt_model.fit(X_train_tfidf, y_train)
+nb_model = naive_bayes.MultinomialNB()
+nb_model.fit(X_train_tfidf, y_train)
 
 # Evaluate the model on the test set
-y_pred = dt_model.predict(X_test_tfidf)
+y_pred = nb_model.predict(X_test_tfidf)
 print(classification_report(y_test, y_pred))
 
 example_data = ["Stop playing your phone!"]
 example_data_tfidf = tfidf_vectorizer.transform(example_data)
-prediction = dt_model.predict(example_data_tfidf)
+prediction = nb_model.predict(example_data_tfidf)
 print("Predicted emotion:", prediction)
