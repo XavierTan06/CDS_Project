@@ -11,19 +11,19 @@ path_test = r"data/clean/EDFnlp_test.csv"
 ds = load_dataset("csv", data_files={"train": path_train, "test": path_test})
 
 model_ckpt = "prajjwal1/bert-tiny"
-tokenizer = AutoTokenizer.from_pretrained(model_ckpt, do_lower_case=True)
-
-def tokenize(batch):
-    return tokenizer(batch["text"], padding="max_length", truncation=True, max_length=512)
-
-dse = ds.map(tokenize, batched=True)
-example_data = tokenizer(["Stop playing your phone!"])
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 num_labels = len(label2id)
 
 model = AutoModelForSequenceClassification.from_pretrained(model_ckpt, num_labels=num_labels, id2label=id2label, label2id=label2id).to(device)
+
+tokenizer = AutoTokenizer.from_pretrained(model_ckpt, do_lower_case=True)
+
+def tokenize(batch):
+    return tokenizer(batch["text"], padding="max_length", truncation=True, max_length=512)
+
+dse = ds.map(tokenize, batched=True)
 
 metric = evaluate.load("accuracy")
 

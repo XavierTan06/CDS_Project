@@ -10,7 +10,7 @@ path_test = r"data/clean/TweetEmotions_test.csv"
 
 ds = load_dataset("csv", data_files={"train": path_train, "test": path_test})
 
-model_ckpt = "prajjwal1/bert-tiny"
+model_ckpt = "openai-community/gpt2"
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -19,9 +19,11 @@ num_labels = len(label2id)
 model = AutoModelForSequenceClassification.from_pretrained(model_ckpt, num_labels=num_labels, id2label=id2label, label2id=label2id).to(device)
 
 tokenizer = AutoTokenizer.from_pretrained(model_ckpt, do_lower_case=True)
+tokenizer.pad_token = tokenizer.eos_token
+model.config.pad_token_id = model.config.eos_token_id
 
 def tokenize(batch):
-    return tokenizer(batch["text"], padding="max_length", truncation=True, max_length=512)
+    return tokenizer(batch["text"], padding="max_length", truncation=True, max_length=1024)
 
 dse = ds.map(tokenize, batched=True)
 
