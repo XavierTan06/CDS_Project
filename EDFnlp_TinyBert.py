@@ -1,3 +1,4 @@
+import os
 import torch
 import numpy as np
 from datasets import load_dataset
@@ -5,8 +6,10 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trai
 import evaluate
 from labelMap import label2id, id2label
 
-path_train = r"data/clean/EDFnlp_train.csv"
-path_test = r"data/clean/EDFnlp_test.csv"
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+path_train = os.path.join(dir_path, r"data/clean/EDFnlp_train.csv")
+path_test = os.path.join(dir_path, r"data/clean/EDFnlp_test.csv")
 
 ds = load_dataset("csv", data_files={"train": path_train, "test": path_test})
 

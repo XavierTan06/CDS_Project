@@ -1,5 +1,8 @@
+import os
 import pandas as pd
 from labelMap import label2id, id2label
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
 fn = ["test", "train", "val"]
 
@@ -7,7 +10,7 @@ test_text = []
 test_labels = []
 
 file_path = r"data\emotions-dataset-for-nlp\test.txt"
-with open(file_path, "r") as f:
+with open(os.path.join(dir_path, file_path), "r") as f:
     data = f.readlines()
 
 for line in data:
@@ -20,7 +23,7 @@ train_text = []
 train_labels = []
 
 file_path = r"data\emotions-dataset-for-nlp\train.txt"
-with open(file_path, "r") as f:
+with open(os.path.join(dir_path, file_path), "r") as f:
     data = f.readlines()
 
 for line in data:
@@ -30,7 +33,7 @@ for line in data:
     train_labels.append(l)
 
 file_path = r"data\emotions-dataset-for-nlp\val.txt"
-with open(file_path, "r") as f:
+with open(os.path.join(dir_path, file_path), "r") as f:
     data = f.readlines()
 
 for line in data:
@@ -51,8 +54,8 @@ df_test.drop_duplicates(inplace=True)
 df_train["labels"].replace(["joy"], ["happiness"], inplace=True)
 df_test["labels"].replace(["joy"], ["happiness"], inplace=True)
 
-print(df_train["labels"].value_counts(ascending=True))
-print(df_test["labels"].value_counts(ascending=True))
+# print(df_train["labels"].value_counts(ascending=True))
+# print(df_test["labels"].value_counts(ascending=True))
 
 df_train["labels"].replace(label2id, inplace=True)
 df_test["labels"].replace(label2id, inplace=True)
@@ -60,5 +63,5 @@ df_test["labels"].replace(label2id, inplace=True)
 print(df_train["labels"].value_counts(ascending=True))
 print(df_test["labels"].value_counts(ascending=True))
 
-csv_train = df_train.to_csv(r"data\clean\EDFnlp_train.csv", index=False)
-csv_test = df_test.to_csv(r"data\clean\EDFnlp_test.csv", index=False)
+csv_train = df_train.to_csv(os.path.join(dir_path, r"data\clean\EDFnlp_train.csv"), index=False)
+csv_test = df_test.to_csv(os.path.join(dir_path, r"data\clean\EDFnlp_test.csv"), index=False)

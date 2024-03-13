@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from sklearn import tree
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -5,8 +6,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from labelMap import label2id, id2label
 
-df_train = pd.read_csv(r"data/clean/EDFnlp_train.csv")
-df_test = pd.read_csv(r"data/clean/EDFnlp_test.csv")
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+df_train = pd.read_csv(os.path.join(dir_path, r"data/clean/EDFnlp_train.csv"))
+df_test = pd.read_csv(os.path.join(dir_path, r"data/clean/EDFnlp_test.csv"))
 
 X_train = df_train["text"]
 X_test = df_test["text"]
