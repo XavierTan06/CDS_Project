@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.svm import SVC
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import MaxAbsScaler
-from sklearn.metrics import classification_report
+from sklearn.metrics import classification_report, f1_score
 from labelMap import label2id, id2label
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
