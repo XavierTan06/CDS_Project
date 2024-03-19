@@ -1,14 +1,14 @@
 import os
 import pandas as pd
-from sklearn import naive_bayes
+from sklearn.linear_model import LogisticRegression
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import classification_report
 from labelMap import label2id, id2label
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-df_train = pd.read_csv(os.path.join(dir_path, r"data/clean/RECCON_train.csv"))
-df_test = pd.read_csv(os.path.join(dir_path, r"data/clean/RECCON_test.csv"))
+df_train = pd.read_csv(os.path.join(dir_path, r"data/clean/EDFnlp_train.csv"))
+df_test = pd.read_csv(os.path.join(dir_path, r"data/clean/EDFnlp_test.csv"))
 
 X_train = df_train["text"]
 X_test = df_test["text"]
@@ -21,14 +21,14 @@ X_train_tfidf = tfidf_vectorizer.fit_transform(X_train)
 X_test_tfidf = tfidf_vectorizer.transform(X_test)
 
 #Train the Decision Tree model
-nb_model = naive_bayes.MultinomialNB()
-nb_model.fit(X_train_tfidf, y_train)
+logreg_model = LogisticRegression()
+logreg_model.fit(X_train_tfidf, y_train)
 
 # Evaluate the model on the test set
-y_pred = nb_model.predict(X_test_tfidf)
+y_pred = logreg_model.predict(X_test_tfidf)
 print(classification_report(y_test, y_pred))
 
 example_data = ["Stop playing your phone!"]
 example_data_tfidf = tfidf_vectorizer.transform(example_data)
-prediction = nb_model.predict(example_data_tfidf)
+prediction = logreg_model.predict(example_data_tfidf)
 print("Predicted emotion:", prediction)
