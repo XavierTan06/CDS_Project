@@ -8,8 +8,8 @@ from labelMap import label2id, id2label
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-path_train = os.path.join(dir_path, r"data/clean/TweetEmotions_train.csv")
-path_test = os.path.join(dir_path, r"data/clean/TweetEmotions_test.csv")
+path_train = os.path.join(dir_path, r"data/clean/Merge_train.csv")
+path_test = os.path.join(dir_path, r"data/clean/Merge_test.csv")
 
 ds = load_dataset("csv", data_files={"train": path_train, "test": path_test})
 
@@ -40,7 +40,7 @@ logging_steps = len(dse["train"]) // batch_size
 model_name = f"{model_ckpt}-finetuned-emotion"
 training_args = TrainingArguments(
     output_dir=model_name,
-    num_train_epochs=4,
+    num_train_epochs=6,
     learning_rate=5e-5,
     per_device_train_batch_size=batch_size,
     per_device_eval_batch_size=batch_size,

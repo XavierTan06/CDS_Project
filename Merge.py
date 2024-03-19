@@ -10,10 +10,13 @@ cleanfiles = os.listdir(clean_path)
 
 df = pd.DataFrame({"text": [], "labels": []})
 
+merge = ["EDFnlp", "TweetEmotions"]
+
 for file in cleanfiles:
-    if "Merge" not in file:
+    if file.split("_")[0] in merge:
         dff = pd.read_csv(os.path.join(clean_path, file))
         df = pd.concat((df, dff))
+        print(file.split("_")[0])
 
 df.reset_index(inplace=True, drop=True)
 counts = df["labels"].value_counts(ascending=True)
@@ -26,6 +29,8 @@ df = pd.DataFrame({"text": [], "labels": []})
 
 for dfc in cat:
     df = pd.concat((df, dfc))
+
+df["labels"] = df["labels"].astype(int)
 
 df_train, df_test = train_test_split(df, stratify=df["labels"], test_size=0.1)
 df_train.reset_index(inplace=True, drop=True)
