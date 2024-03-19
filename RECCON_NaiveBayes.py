@@ -27,6 +27,8 @@ nb_model.fit(X_train_tfidf, y_train)
 # Evaluate the model on the test set
 y_pred = nb_model.predict(X_test_tfidf)
 print(classification_report(y_test, y_pred))
+f1 = f1_score(y_test, y_pred, average="micro")
+print(f"Overall f1: {f1}")
 
 example_data = ["Stop playing your phone!"]
 example_data_tfidf = tfidf_vectorizer.transform(example_data)

@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.svm import SVC
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import MaxAbsScaler
-from sklearn.metrics import classification_report
+from sklearn.metrics import classification_report, f1_score
 from labelMap import label2id, id2label
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -35,6 +35,8 @@ svm_model.fit(X_train_norm, y_train)
 # Evaluate the model on the test set
 y_pred = svm_model.predict(X_test_norm)
 print(classification_report(y_test, y_pred))
+f1 = f1_score(y_test, y_pred, average="micro")
+print(f"Overall f1: {f1}")
 
 example_data = ["Stop playing your phone!"]
 example_data_tfidf = tfidf_vectorizer.transform(example_data)
