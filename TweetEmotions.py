@@ -13,11 +13,10 @@ df.drop("tweet_id", axis=1, inplace=True)
 df.rename(columns={"sentiment": "labels", "content": "text"}, inplace=True)
 df.drop_duplicates(inplace=True)
 
-df = df[df["labels"] != "fun"]
-df = df[df["labels"] != "hate"]
-df = df[df["labels"] != "enthusiasm"]
-df = df[df["labels"] != "empty"]
-df = df[df["labels"] != "boredom"]
+ft = ["fun", "hate", "enthusiasm", "empty", "boredom", "love", "worry", "relief"]
+
+for f in ft:
+    df = df[df["labels"] != f]
 
 df["labels"].replace(label2id, inplace=True)
 

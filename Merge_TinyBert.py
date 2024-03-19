@@ -33,14 +33,14 @@ metric = evaluate.load("f1")
 def compute_metrics(eval_pred):
     logits, labels = eval_pred
     predictions = np.argmax(logits, axis=-1)
-    return metric.compute(predictions=predictions, references=labels, average="micro")
+    return metric.compute(predictions=predictions, references=labels, average="weighted")
 
 batch_size = 16
 logging_steps = len(dse["train"]) // batch_size
 model_name = f"{model_ckpt}-finetuned-emotion"
 training_args = TrainingArguments(
     output_dir=model_name,
-    num_train_epochs=6,
+    num_train_epochs=4,
     learning_rate=5e-5,
     per_device_train_batch_size=batch_size,
     per_device_eval_batch_size=batch_size,

@@ -10,7 +10,7 @@ cleanfiles = os.listdir(clean_path)
 
 df = pd.DataFrame({"text": [], "labels": []})
 
-merge = ["EDFnlp", "TweetEmotions"]
+merge = ["EDFnlp", "GoEmotions"]
 
 for file in cleanfiles:
     if file.split("_")[0] in merge:

@@ -27,10 +27,10 @@ dt_model.fit(X_train_tfidf, y_train)
 # Evaluate the model on the test set
 y_pred = dt_model.predict(X_test_tfidf)
 print(classification_report(y_test, y_pred))
-f1 = f1_score(y_test, y_pred, average="micro")
+f1 = f1_score(y_test, y_pred, average="weighted")
 print(f"Overall f1: {f1}")
 
-example_data = ["Stop playing your phone!"]
+example_data = ["I can’t go in there, it’s too dark and I keep hearing strange noises!"]
 example_data_tfidf = tfidf_vectorizer.transform(example_data)
 prediction = dt_model.predict(example_data_tfidf)
 print("Predicted emotion:", prediction)

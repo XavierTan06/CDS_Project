@@ -54,8 +54,11 @@ df_test.drop_duplicates(inplace=True)
 df_train["labels"].replace(["joy"], ["happiness"], inplace=True)
 df_test["labels"].replace(["joy"], ["happiness"], inplace=True)
 
-# print(df_train["labels"].value_counts(ascending=True))
-# print(df_test["labels"].value_counts(ascending=True))
+ft = ["love"]
+
+for f in ft:
+    df_train = df_train[df_train["labels"] != f]
+    df_test = df_test[df_test["labels"] != f]
 
 df_train["labels"].replace(label2id, inplace=True)
 df_test["labels"].replace(label2id, inplace=True)

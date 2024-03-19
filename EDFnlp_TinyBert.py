@@ -33,7 +33,7 @@ metric = evaluate.load("f1")
 def compute_metrics(eval_pred):
     logits, labels = eval_pred
     predictions = np.argmax(logits, axis=-1)
-    return metric.compute(predictions=predictions, references=labels, average="micro")
+    return metric.compute(predictions=predictions, references=labels, average="weighted")
 
 batch_size = 16
 logging_steps = len(dse["train"]) // batch_size

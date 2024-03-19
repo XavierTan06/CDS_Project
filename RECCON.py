@@ -86,11 +86,11 @@ df_test.drop_duplicates(inplace=True)
 df_train["labels"].replace(["sad", "happy", "surprised", "angry"], ["sadness", "happiness", "surprise", "anger"], inplace=True)
 df_test["labels"].replace(["sad", "happy", "surprised", "angry", "happines"], ["sadness", "happiness", "surprise", "anger", "happiness"], inplace=True)
 
-df_train = df_train[df_train["labels"] != "excited"]
-df_test = df_test[df_test["labels"] != "excited"]
+ft = ["excited"]
 
-# print(df_train["labels"].value_counts(ascending=True))
-# print(df_test["labels"].value_counts(ascending=True))
+for f in ft:
+    df_train = df_train[df_train["labels"] != f]
+    df_test = df_test[df_test["labels"] != f]
 
 df_train["labels"].replace(label2id, inplace=True)
 df_test["labels"].replace(label2id, inplace=True)
