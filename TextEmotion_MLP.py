@@ -17,7 +17,7 @@ X_test = df_test["content"]
 y_train = df_train["sentiment"]
 y_test = df_test["sentiment"]
 
-# Replace NaN values with empty strings
+# Replace NaN values with empty strings. At least for this dataset, this step can't be done before splitting the data.
 X_train = X_train.fillna('')
 X_test = X_test.fillna('')
 

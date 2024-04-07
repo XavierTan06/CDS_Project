@@ -13,16 +13,20 @@ df = pd.read_csv(rawfile_path)
 df.drop(["tweet_id", "author"], axis=1, inplace=True)
 df=df[df["sentiment"].isin(label2id.keys())]
 
-def remove_punctuations(text):
+""" def remove_punctuations(text):
     for char in string.punctuation:
         text = text.replace(char, '')
+    return text """
+
+def remove(text):
+    text = re.sub(r"(@\S+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)|^rt|http.+?", "", text)
+    text = re.sub(r"\d+\S*|\S*\d+", "", text)
     return text
 
 df['content'] = df['content'].str.lower()
-df['content'] = df['content'].apply(remove_punctuations)
+df['content'] = df['content'].apply(remove)
 stop = stopwords.words('english')
 df['content'] = df['content'].apply(lambda x: ' '.join([word for word in x.split() if word not in (stop)]))
-df = df.fillna('')
 print(df)
 
 df_train, df_test = train_test_split(df, stratify=df["sentiment"], test_size=0.1)
