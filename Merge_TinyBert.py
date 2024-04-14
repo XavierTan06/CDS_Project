@@ -66,4 +66,4 @@ trainer.train()
 eval = trainer.evaluate(dse["test"])
 print(eval)
 
-trainer.save_model("/saved/Merge_TinyBert")
+trainer.save_model("./saved/Merge_TinyBert")
