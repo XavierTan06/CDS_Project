@@ -34,9 +34,15 @@ svm_model.fit(X_train_norm, y_train)
 
 # Evaluate the model on the test set
 y_pred = svm_model.predict(X_test_norm)
-print(classification_report(y_test, y_pred))
+classification_rep = classification_report(y_test, y_pred)
+print(classification_rep)
 f1 = f1_score(y_test, y_pred, average="weighted")
 print(f"Overall f1: {f1}")
+
+with open("output/EDFnlp_SVM.txt", "w") as file:
+    file.write(classification_rep)
+    file.write("\n")
+    file.write("Overall f1-score: " + str(f1))
 
 example_data = ["Stop playing your phone!"]
 example_data_tfidf = tfidf_vectorizer.transform(example_data)

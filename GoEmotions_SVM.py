@@ -8,8 +8,8 @@ from labelMap import label2id, id2label
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-df_train = pd.read_csv(os.path.join(dir_path, r"data/clean/RECCON_train.csv"))
-df_test = pd.read_csv(os.path.join(dir_path, r"data/clean/RECCON_test.csv"))
+df_train = pd.read_csv(os.path.join(dir_path, r"data/clean/GoEmotions_train.csv"))
+df_test = pd.read_csv(os.path.join(dir_path, r"data/clean/GoEmotions_test.csv"))
 
 X_train = df_train["text"]
 X_test = df_test["text"]
@@ -39,11 +39,10 @@ print(classification_rep)
 f1 = f1_score(y_test, y_pred, average="weighted")
 print(f"Overall f1: {f1}")
 
-with open("output/RECCON_SVM.txt", "w") as file:
+with open("output/GoEmotions_SVM.txt", "w") as file:
     file.write(classification_rep)
     file.write("\n")
     file.write("Overall f1-score: " + str(f1))
-
 
 example_data = ["Stop playing your phone!"]
 example_data_tfidf = tfidf_vectorizer.transform(example_data)
