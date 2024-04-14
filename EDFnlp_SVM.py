@@ -9,7 +9,7 @@ from labelMap import label2id, id2label
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 df_train = pd.read_csv(os.path.join(dir_path, r"data/clean/EDFnlp_train.csv"))
-df_test = pd.read_csv(os.path.join(dir_path, r"data/clean/EDFnlp_test.csv"))
+df_test = pd.read_csv(os.path.join(dir_path, r"data/clean/Merge_test.csv"))
 
 X_train = df_train["text"]
 X_test = df_test["text"]
