@@ -2,7 +2,7 @@ import os
 import torch
 import numpy as np
 from datasets import load_dataset
-from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
+from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
 import evaluate
 from labelMap import label2id, id2label
 
@@ -65,3 +65,5 @@ trainer.train()
 
 eval = trainer.evaluate(dse["test"])
 print(eval)
+
+trainer.save_model("./saved/EDFnlp_TinyBert")
