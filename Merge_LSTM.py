@@ -9,7 +9,7 @@ from gensim.models import Word2Vec
 #Load data
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-df_train = pd.read_csv(os.path.join(dir_path, r"data/clean/EDFnlp_train.csv"))
+df_train = pd.read_csv(os.path.join(dir_path, r"data/clean/Merge_train.csv"))
 df_test = pd.read_csv(os.path.join(dir_path, r"data/clean/Merge_test.csv"))
 
 X_train = df_train["text"]
