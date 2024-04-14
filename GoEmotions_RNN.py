@@ -9,6 +9,7 @@ from keras.layers import Dense
 from keras.layers import Flatten
 from keras.layers import Embedding
 from keras.layers import SimpleRNN
+from sklearn.metrics import classification_report, f1_score
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -45,6 +46,13 @@ optimizer = keras.optimizers.Adam(learning_rate=0.001)
 model.compile(optimizer=optimizer, loss="sparse_categorical_crossentropy", metrics=["accuracy"])
 model.fit(X_train_w2v, y_train, batch_size=32, epochs=5, validation_data=(X_test_w2v, y_test))
 
-from sklearn.metrics import classification_report
 val_pred = np.argmax(model.predict(X_test_w2v), axis=-1)
-print(classification_report(y_test, val_pred))
+classification_rep = classification_report(y_test, val_pred)
+print(classification_rep)
+f1 = f1_score(y_test, val_pred, average="weighted")
+print(f"Overall f1: {f1}")
+
+with open("output/GoEmotions_RNN.txt", "w") as file:
+    file.write(classification_rep)
+    file.write("\n")
+    file.write("Overall f1-score: " + str(f1))
