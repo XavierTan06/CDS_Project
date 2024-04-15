@@ -49,7 +49,7 @@ print(classification_rep)
 f1 = f1_score(y_test, val_pred, average="weighted")
 print(f"Overall f1: {f1}")
 
-with open("output/EDFnlp_LSTM.txt", "w") as file:
+with open("output/EDFnlp - Merge/EDFnlp_Merge_LSTM.txt", "w") as file:
     file.write(classification_rep)
     file.write("\n")
     file.write("Overall f1-score: " + str(f1))
