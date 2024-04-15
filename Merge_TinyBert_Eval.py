@@ -2,7 +2,7 @@ import os
 import torch
 from datasets import load_dataset
 from transformers import pipeline, AutoModelForSequenceClassification, AutoTokenizer
-from sklearn.metrics import classification_report
+from sklearn.metrics import classification_report, f1_score
 from labelMap import id2label, label2id
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -22,3 +22,9 @@ y_test_id = ds["test"]["labels"]
 y_test = [id2label[y] for y in y_test_id]
 classification_rep = classification_report(y_test, y_pred)
 print(classification_rep)
+f1 = f1_score(y_test, y_pred, average="weighted")
+
+with open("output/Merge - Merge/Merge_TinyBert.txt", "w") as file:
+    file.write(classification_rep)
+    file.write("\n")
+    file.write("Overall f1-score: " + str(f1))

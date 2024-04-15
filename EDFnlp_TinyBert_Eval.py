@@ -2,13 +2,13 @@ import os
 import torch
 from datasets import load_dataset
 from transformers import pipeline, AutoModelForSequenceClassification, AutoTokenizer
-from sklearn.metrics import classification_report
+from sklearn.metrics import classification_report, f1_score
 from labelMap import id2label, label2id
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 model_ckpt = "./saved/EDFnlp_TinyBert"
 
-path_test = os.path.join(dir_path, r"data/clean/Merge_test.csv")
+path_test = os.path.join(dir_path, r"data/clean/EDFnlp_test.csv")
 
 ds = load_dataset("csv", data_files={"test": path_test})
 
@@ -22,3 +22,9 @@ y_test_id = ds["test"]["labels"]
 y_test = [id2label[y] for y in y_test_id]
 classification_rep = classification_report(y_test, y_pred)
 print(classification_rep)
+f1 = f1_score(y_test, y_pred, average="weighted")
+
+with open("output/EDFnlp - EDFnlp/EDFnlp_TinyBert.txt", "w") as file:
+    file.write(classification_rep)
+    file.write("\n")
+    file.write("Overall f1-score: " + str(f1))

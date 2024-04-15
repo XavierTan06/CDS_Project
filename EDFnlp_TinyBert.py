@@ -5,11 +5,12 @@ from datasets import load_dataset
 from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
 import evaluate
 from labelMap import label2id, id2label
+from sklearn.metrics import classification_report, f1_score
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 path_train = os.path.join(dir_path, r"data/clean/EDFnlp_train.csv")
-path_test = os.path.join(dir_path, r"data/clean/Merge_test.csv")
+path_test = os.path.join(dir_path, r"data/clean/EDFnlp_test.csv")
 
 ds = load_dataset("csv", data_files={"train": path_train, "test": path_test})
 
@@ -66,4 +67,9 @@ trainer.train()
 eval = trainer.evaluate(dse["test"])
 print(eval)
 
+<<<<<<< HEAD
+with open("output/EDFnlp - EDFnlp/EDFnlp_TinyBert.txt", "w") as file:
+    file.write("Overall f1-score: " + str(metric))
+=======
 trainer.save_model("./saved/EDFnlp_TinyBert")
+>>>>>>> 8abbea4d9bbdf109e886ed2ee62f177438625d25
