@@ -22,7 +22,7 @@ X_test_tfidf = tfidf_vectorizer.transform(X_test)
 
 #Train the Decision Tree model
 nb_model = naive_bayes.MultinomialNB()
-nb_model.fit(X_train_tfidf, y_train)
+nb_model.fit(X_train_tfidf, y_train) 
 
 # Evaluate the model on the test set
 y_pred = nb_model.predict(X_test_tfidf)

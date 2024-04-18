@@ -10,14 +10,18 @@ text = []
 labels = []
 
 df = pd.read_parquet(os.path.join(dir_path, r"data\GoEmotions\train-00000-of-00001.parquet"))
-df.rename(columns={"joy": "happiness"})
+
+# df.rename(columns={"joy": "happiness"})
+
 inc = set(label2id.keys()) & set(df.columns.to_list())
+
 for label in df.columns.to_list():
+    # print(label)
     if label not in inc and label != "text":
         df.drop(label, axis=1, inplace=True)
-
-df = df[df.sum(axis=1) == 1]
-
+print(df.head())
+# df = df[df.sum(axis=1) == 1]
+df = df[(df.iloc[:, 1:] == 1).any(axis=1)]
 for label in inc:
     df.loc[df[label]==1, "labels"] = label
 
@@ -25,6 +29,7 @@ df = df[["text", "labels"]]
 df.reset_index(inplace=True, drop=True)
 
 df["labels"].replace(label2id, inplace=True)
+# df["labels"] = df["labels"].astype(int)
 
 df_train, df_test = train_test_split(df)
 
