@@ -23,6 +23,7 @@ y_test = [id2label[y] for y in y_test_id]
 classification_rep = classification_report(y_test, y_pred)
 print(classification_rep)
 f1 = f1_score(y_test, y_pred, average="weighted")
+print("Overall f1-score: " + str(f1))
 
 with open("output/Merge - Merge/Merge_TinyBert.txt", "w") as file:
     file.write(classification_rep)
