@@ -1,4 +1,4 @@
-              precision    recall  f1-score   support
+               precision    recall  f1-score   support
 
        anger       0.66      0.03      0.06      1979
      disgust       0.91      0.02      0.04      1170
